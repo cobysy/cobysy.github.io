@@ -1,0 +1,1549 @@
+<!doctype html>
+<html>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title>Sokatsu Yamane</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
+	<style>
+		/********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: disc;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Custom reset */
+.main-summary p, 
+#publications .item,
+#skills .item,
+#languages .item,
+#references .item,
+#interests .item{
+	margin: 0;
+}
+
+
+/****************
+*		SMARTPHONES		
+****************/
+em {
+	color: #757575;
+}
+p {
+	margin: 1em 0;
+}
+blockquote {
+	margin: 0;
+	margin-bottom: 1em;
+}
+strong {
+	font-weight: 700;
+	font-size: 1.1em;
+}
+ul {
+	margin-top: 1em; 
+}
+div.item {
+	padding-bottom: 2em;
+}
+div.item:last-of-type {
+	margin: 0;
+	border-bottom: none;
+	padding-bottom: 0;
+}
+p {
+	text-align: justify;
+}
+
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+h1 {
+	font-size: 1.25rem;
+}
+h2 {
+	font-size: 1rem;
+}
+h3 {
+	font-size: 1rem;
+}
+a {
+	color: darkcyan;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+/* Layout */
+body {
+	background: #f2f2f2;
+	line-height: 1.6;
+	font-size: 13px;
+	font-family: "Source Sans Pro", Helvetica, Arial, sans-serif, "Hiragino Kaku Gothic Pro", Meiryo, "Hiragino Sans GB W3", "Noto Naskh Arabic", "Droid Arabic Naskh", "Geeza Pro", "Simplified Arabic", "Noto Sans Thai", Thonburi, Dokchampa, "Droid Sans Thai", "Droid Sans Fallback", -apple-system, ".SFNSDisplay-Regular", "Heiti SC", "Microsoft Yahei", "Segoe UI";
+}
+
+#resume {
+	padding: 1rem 0;
+	margin: 1rem auto;
+}
+
+#header {
+	padding: 0 1em;
+	margin-bottom: 1em;
+}
+
+#resume > header div {
+	display: table;
+	padding-left: 0.5em;
+}
+
+#resume > header div.middle {
+	padding-top: 1em;
+}
+
+header img {
+	display: block;
+	width: 10em;
+	border-radius: 0.275em;
+	float: right;
+	vertical-align: middle;
+}
+
+header .name {
+	line-height: 1;
+}
+
+header .label {
+	font-size: 1.1rem;
+	font-weight: 400;
+	color: #000000;
+}
+
+section:not(.section) {
+	padding: .5em 1rem;
+}
+
+section#references {
+	border-bottom:none;
+}
+
+section#basics {
+	background: inherit;
+	margin-bottom: 0;
+}
+
+section#skills {
+	padding-bottom: 0;
+}
+
+section#education, 
+section#work, 
+.main-summary section {
+	padding-bottom: 1em;
+}
+.main-summary p {
+	padding-bottom: 0.5em;
+}
+
+header::after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+
+h2.section-title {
+	text-align: left;
+	font-size: 1rem;
+	font-weight: 400;
+	color: #000000;
+	padding: 1em 1rem 0;
+	margin-bottom: 0.1275em;
+}
+
+.date {
+	font-weight: 700;
+	color: #000000;
+}
+
+.position, .area, .institution {
+	font-weight: 700;
+}
+
+#interests .item, #languages .item {
+	padding: 0 1em 1em 0;
+	border-bottom: none;
+}
+
+#profiles, #skills, #interests, #languages {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+  padding-bottom: 1em;
+}
+
+#profiles, #location {
+	box-shadow: none;
+	padding: 0;
+}
+
+#profiles .item {
+	margin: 0;
+	padding: 0;
+	padding-right: 1em;
+	border-bottom: none;
+}
+
+#interests ul {
+	margin-top: 0.5em;
+}
+
+#publications .name {
+	font-style: italic;
+}
+
+.courses li, .keywords li{
+	display: inline-block;
+	background: #f0f0f0;
+	font-size: 0.9em;
+	line-height: 1;
+	color: #333;
+	padding: 0.4em 0.8em;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-radius: 3px;
+}
+
+#publications .date {
+	font-weight: normal;
+	color: #000;	
+}
+
+#skills .item {
+	min-width: 15em;
+	padding: 0 .5em .8em 0;
+	border-bottom: none;
+}
+
+
+/* Skills chart */
+#skills .level .bar {
+	border: 1px solid #ddd;
+	display: block;
+	width: 10em;
+	height: 5px;
+	margin: 0em 0 1em 0;
+	position: relative;
+}
+
+#skills .level .bar::after {
+	position: absolute;
+	content: " ";
+	top: 0;
+	left: 0;
+	background: black;
+	height: 5px;
+}
+
+#skills .level.beginner .bar::after {
+	background: #EB5F51;
+	width: 2.5em;
+} 
+
+#skills .level.intermediate .bar::after {
+	background: #ffdf1f;
+	width: 5em;
+} 
+
+#skills .level.advanced .bar::after {
+	background: #59C596;
+	width: 7.5em;
+} 
+
+#skills .level.master .bar::after {
+	background: #5CB85C;
+	width: 10em;
+}
+
+#references .item {
+	padding-left: 1em;
+	border-left: 5px solid #EB5F51;
+}
+
+.fa.social {
+	margin-right: 0.25em;
+	font-size: 1.1em;
+}
+
+/* Social Media Brand Colors */
+.google-plus {
+	color: #dd4b39;	
+}
+
+.tumblr {
+	color:#32506d;
+}
+
+.foursquare {
+	color:  #0072b1;
+}
+
+.facebook {
+	color: #3b5998;
+}
+
+.linkedin {
+	color: #007bb6;
+}
+
+.pinterest {
+	color: #cb2027;
+}
+
+.dribbble {
+	color: #ea4c89;
+}
+
+.instagram {
+	color: #517fa4;
+}
+
+.twitter {
+	color: #00aced;
+}
+
+.soundcloud { 
+	color: #ff3a00;
+}
+
+.wordpress {
+	color: #21759b;
+}
+
+.youtube {
+	color: #bb0000;
+}
+
+.github {
+	color: #171515;
+}
+
+.stack-overflow {
+	color: #828386;
+	position: relative;
+}
+
+.flickr {
+	color: #ff0084;
+}      
+
+.stack-overflow::after {
+	position: absolute;
+	left: 0;
+	content: '\f16c';
+	color: #f68a1f;
+	overflow: hidden;
+	height: 40%;
+}
+
+/******************
+*		HELPER CLASSES	
+******************/
+.fa {
+	min-width: 1.25em;
+	margin-right: 0.25em;
+	text-align: center;
+}
+
+.clear {
+	display: table;
+	clear: both;
+}
+
+
+/****************
+*		TABLET
+****************/
+@media screen and (min-width: 602px) { 
+	
+	#resume {
+		width: 550px;
+		margin: 0 auto;
+	}
+	section > header > h3 {
+		float:left;
+	}
+	section > header > .date {
+		float: right;
+		line-height: 1.3;
+	}
+
+}
+
+
+/****************
+*		LAPTOP	
+****************/
+@media screen and (min-width: 1025px) { 
+	
+	#resume {
+		width: 650px;		
+		padding: 3em;
+		margin: 3em auto;
+		background: #fff;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+	}
+
+	.section {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		margin-bottom: 1em;
+		margin-top: 1em;
+		border-bottom: 1px solid #eee;
+	}
+
+	.section:last-of-type {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+
+	section > header {
+		line-height: 1;
+		padding-bottom: 1em; 
+	}
+
+	h2.section-title {
+		line-height: 1.1;
+		padding-top: 0;
+	}
+
+	section:not(.section) {
+		width: 34.5em;
+		padding: 0 1em 1em 0;
+		margin-top:0;
+		border: none;
+	}
+
+	section p {
+		margin: 0;
+	}
+
+	section#basics {
+		width: auto;
+		padding-top: 1em;
+		padding-left: 1em;
+		padding-bottom: 0;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+	}
+
+	#profiles .item{
+		padding-bottom: 1em;
+	}
+
+	div {
+		padding: 0;
+	}
+
+	#skills .item {
+		padding-left:0;
+		margin-top: 0;
+	}
+
+	div.item {
+		margin-top: 0;
+		border-bottom: 1px solid #eee;
+	}
+
+}
+	</style>
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	
+	<body>
+		<div id="resume">
+				<header id="header">
+						<img src="http://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAxcAAAAJGY0Yzk4MmU5LTQ5NWQtNGMwZS1hOWY4LTkwZWM1N2EwOTk3NA.jpg" alt="Sokatsu Yamane" style="border-radius: 50%;"/>
+						<div class="middle">
+							<h1 class="name">Sokatsu Yamane</h1>
+							<h2 class="label">Software Developer</h2>
+						</div>
+
+				</header>
+				
+				<section id="basics">
+					
+						<div id="location">
+							<span class="fa fa-map-marker"></span>
+							<span class="city">
+								Copenhagen
+							</span>
+							<span class="countryCode">
+								(DK)
+							</span>
+						</div>
+
+					<div id="contact">
+						<div class="website">
+							<span class="fa fa-external-link"></span>
+							<a href="http://cobysy.com">http://cobysy.com</a>
+						</div>
+						<div class="email">
+							<span class="fa fa-envelope-o"></span>
+							<a href="mailto:sokatsu@bysy.io">sokatsu@bysy.io</a>
+						</div>
+						<div class="phone">
+							<span class="fa fa-phone"></span>
+							+45 31360823
+						</div>
+					</div>
+				
+
+					<div id="profiles">
+						<div class="item">
+							<span class="network fa fa-linkedin linkedin"></span>
+							<span class="username">
+								<span class="url">
+									<a href="https://www.linkedin.com/in/sokatsu">LinkedIn</a>
+								</span>
+							</span>
+						</div>
+						<div class="item">
+							<span class="network fa fa-github github"></span>
+							<span class="username">
+								<span class="url">
+									<a href="https://github.com/cobysy">GitHub</a>
+								</span>
+							</span>
+						</div>
+					</div>
+				</section>
+
+				<section class="section main-summary">
+					<h2 class='section-title'>About</h2>
+					<section>
+						<p>Agile .NET C# system developer and system designer well versed in large scale enterprise systems.</p>
+						<p>Adept in working with large administrative systems and financial data, with over 10 years of experience of building back-end services dealing with data integrations, business processes and functions.</p>
+						<p>Proven ability to plan and carry out tasks using agile methodologies, and credited approach to create structured documentation for both functional and test teams.</p>
+						<p>I often spend time in Japan between contracts.</p>
+					</section>
+				</section>
+
+				</section>
+
+				<section class="section">
+					<h2 class='section-title'>Experience</h2>
+					<section id="work">
+						<header>
+							<h3 class="name">
+								Saxo Bank
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									October 2016
+								</span>
+								<span class="endDate">
+									- March 2017
+								</span>
+							</div>
+							<div class="website" style="clear: both;">
+								<a href="https://www.home.saxo">https://www.home.saxo</a>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Senior developer &amp; designer for Enterprise Bookkeeping Engine project
+						</div>
+						<div class="summary">
+							<p>Responsible for loading master customer data for the Enterprise Bookkeeping Engine project, and coaching junior developers in creating configuration tools for JPM Close-Out Reporting</p>
+						</div>
+
+						<ul class="highlights">
+							<li>Extracted and imported Master Customer data from various sources like MSCRM, Navision, BizTalk based message bus to tables supporting capturing of historical changes</li>
+							<li>Converted large and complex SSIS based ETL jobs which are developed for DWH reporting to ETL Jobs in C# utilizing an in-house developed framework</li>
+							<li>Documented the imported Master Customer data model</li>
+							<li>Created C# WinForms application modules for business user(s) which provided UI-friendly data administration application</li>
+							<li>Provided coaching of new staff by guidance through processes and framework usage based on obtained knowledge during my previous engagements with the client</li>
+							<li>Provided design documentation, test support and testing guidelines</li>
+							<li>Handled defect analysis and fixing in collaboration with off-shore testers</li>
+						</ul>
+
+						
+						<ul class="contacts">
+							<li style="font-weight: 700;list-style: none">Contacts:</li>
+							<li style="list-style: none">Director Torben Rottbøl Andersen</li>
+						</ul>
+
+						<ul class="keywords">
+							<li>.NET 4.5</li>
+							<li>C#</li>
+							<li>LINQ</li>
+							<li>WCF</li>
+							<li>WinForms</li>
+							<li>SQL server</li>
+							<li>T-SQL</li>
+							<li>STP</li>
+							<li>SSIS</li>
+							<li>ETL</li>
+							<li>MSUnit</li>
+							<li>Moq</li>
+							<li>TFS</li>
+							<li>Enterprise Library</li>
+							<li>Visual Studio</li>
+							<li>SQL Management Studio</li>
+							<li>ReSharper</li>
+							<li>RedGate SQL Toolbelt</li>
+						</ul>
+							
+						</div>
+						<header>
+							<h3 class="name">
+								DGS Denmark / Oticon
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									February 2016
+								</span>
+								<span class="endDate">
+									- June 2016
+								</span>
+							</div>
+							<div class="website" style="clear: both;">
+								<a href="https://www.oticon.global">https://www.oticon.global</a>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Senior DevOps developer &amp; lead for Opn1 firmware updater service in the cloud
+						</div>
+						<div class="summary">
+							<p>Senior developer with ops and lead responsibilites for solutions in the cloud, executed through Microsoft Azure PaaS for a global hearing aid manufacturer</p>
+						</div>
+
+						<ul class="highlights">
+							<li><strong>Hearing aid firmware updater service</strong></li>
+							<li>Developed a global distributed solution in the cloud allowing the manufacturers customers and professionals to connect and upgrade its products firmwares online (Web API)</li>
+							<li>Added critical data collection features to comply with FDA laws</li>
+							<li>Defined and implemented their first continuous delivery pipeline, leveraging infrastructure as code (Azure ARM Templates) to automating server procurement and decreasing wait time to mere minutes</li>
+							<li>Managed Azure cloud environment, which consisted of Azure App Services, Azure SQL Database, Azure Storage Accounts, Azure KeyVault, Azure Traffic Managers, Azure Resource groups and Visual Studio Application Insight instances</li>
+							<li>Created functional tests with SpecFlow (in addition to unit tests) which ran as part of every CI build</li>
+							<li>Provided technical guidance to emerging team of developers in Poland, and collaborated with R&amp;D development team on premises</li>
+							<li><strong>IFTTT solution creating &#x27;smart&#x27; hearing aids</strong></li>
+							<li>Integrated with IFTTT, a real-time service that allows its customers to improve quality and productivity with the manufacturers products</li>
+							<li>Provided architectural and code review of an off-shore developed strategic IoT solution</li>
+							<li>Completed customization work to overcome limitations of some Azure services in public preview</li>
+							<li>Provided technical guidance with Azure Event hubs, Redis cache, Azure Active Directory B2C/OAuth2</li>
+							<li>Managed Azure B2C Active Directory cloud environment incl UI customizations</li>
+						</ul>
+
+						
+						<ul class="contacts">
+							<li style="font-weight: 700;list-style: none">Contacts:</li>
+							<li style="list-style: none">PM Anders Blank</li>
+							<li style="list-style: none">EA Rasmus Therkelsen</li>
+						</ul>
+
+						<ul class="keywords">
+							<li>.NET</li>
+							<li>C#</li>
+							<li>Web API</li>
+							<li>Owin</li>
+							<li>Entity Framework 6</li>
+							<li>Swagger</li>
+							<li>Azure Web Apps</li>
+							<li>Azure SQL</li>
+							<li>Azure Storage</li>
+							<li>Azure OAuth</li>
+							<li>Azure KeyVault</li>
+							<li>Azure Active Directory B2C</li>
+							<li>Azure ARM templates</li>
+							<li>Azure Event Hubs</li>
+							<li>VSTS</li>
+							<li>Git</li>
+							<li>VSTS Build vNext</li>
+							<li>VSTS Release Management</li>
+							<li>xUnit</li>
+							<li>SpecFlow</li>
+							<li>Moq</li>
+							<li>HMAC</li>
+							<li>SSDT</li>
+							<li>AutoFac</li>
+							<li>AutoFixture</li>
+							<li>CQS</li>
+							<li>IFTTT</li>
+							<li>FluentAssertion</li>
+							<li>FluentValidation</li>
+						</ul>
+							
+						</div>
+						<header>
+							<h3 class="name">
+								Danish Broadcasting Corporation (DR)
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									October 2015
+								</span>
+								<span class="endDate">
+									- December 2015
+								</span>
+							</div>
+							<div class="website" style="clear: both;">
+								<a href="https://www.dr.dk">https://www.dr.dk</a>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Senior developer &amp; designer for media tooling
+						</div>
+						<div class="summary">
+							<p>Responsible for implementing ffmpeg based PoC for media encoding, and a browser based media annotation written in javascript</p>
+						</div>
+
+						<ul class="highlights">
+							<li>Added improvements in the OnDemand media encoding and distribution services as a preparation to audio watermarking selected programs</li>
+							<li>Swapped out their existing encoder with ffmpeg, creating an external resource pool solution that manages synchronized access to a finite/restricted number of resource items.</li>
+							<li>Lead work for rewriting a browser-based javascript solution for annotating chapters and thumbnails for DR&#x27;s OnDemand audio and video assets using vanilla JavaScript on the client side and Web API (REST) on the server side.</li>
+						</ul>
+
+						
+						<ul class="contacts">
+							<li style="font-weight: 700;list-style: none">Contacts:</li>
+							<li style="list-style: none">Team Lead Søren Hjarlvig</li>
+							<li style="list-style: none">Lead Developer Peter Wille</li>
+						</ul>
+
+						<ul class="keywords">
+							<li>C#</li>
+							<li>Web API</li>
+							<li>Windows Services</li>
+							<li>REST</li>
+							<li>MongoDB</li>
+							<li>SQL Server</li>
+							<li>GitHub</li>
+							<li>CruiseControl</li>
+							<li>NUNit</li>
+							<li>Moq</li>
+							<li>Akamai</li>
+							<li>ssh</li>
+							<li>sftp</li>
+							<li>ffmpeg</li>
+							<li>Nielsen Arbitron/Encoder</li>
+							<li>JavaScript</li>
+							<li>jQuery</li>
+							<li>HTML5</li>
+						</ul>
+							
+						</div>
+						<header>
+							<h3 class="name">
+								Danish Broadcasting Corporation (DR)
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									May 2015
+								</span>
+								<span class="endDate">
+									- December 2015
+								</span>
+							</div>
+							<div class="website" style="clear: both;">
+								<a href="https://www.dr.dk">https://www.dr.dk</a>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Senior developer &amp; designer for series and season work on Media Universe
+						</div>
+						<div class="summary">
+							<p>Responsible for adding support for on-demand programs, series- seasons- and episode-breakdowns and coherent relationships among them by creating a new service, which provided API methods that support retrieval of schedule, program listings by various properties (channel, genre, etc.) and program details</p>
+						</div>
+
+						<ul class="highlights">
+							<li>Developed and designed of ASP.NET Web API based REST API to support new ontology for on-demand, series, seasons, episodes</li>
+							<li>Integrated with MAS, technically facilitated by a Java team</li>
+							<li>Maintained of existing administrative applications in ASP.NET</li>
+							<li>Developed of advanced MongoDB queries in JavaScript to assist in data analysis for historical programs in the system</li>
+							<li>Did performance analysis and tuning of responsiveness of MongoDB queries</li>
+							<li>Defined system specifications, input/output processes</li>
+							<li>Coordinated delivery of design and implementation with other team members and lead developer for release and preparation of team for sort &amp; maintenance of the system</li>
+							<li>Created unit tests in continuous integration environment</li>
+							<li>Established a functional testing suite to address lack of exposure to tests</li>
+							<li>Provided design documentation, business test support</li>
+							<li>Handled defect analysis and fixing in collaboration with lead developers</li>
+							<li>Communicated between software development teams</li>
+						</ul>
+
+						
+						<ul class="contacts">
+							<li style="font-weight: 700;list-style: none">Contacts:</li>
+							<li style="list-style: none">Architect Bo Bendtsen</li>
+						</ul>
+
+						<ul class="keywords">
+							<li>C#</li>
+							<li>ASP.NET Web API</li>
+							<li>Windows Services</li>
+							<li>REST</li>
+							<li>MongoDB</li>
+							<li>GitHub</li>
+							<li>CruiseControl</li>
+							<li>NUNit</li>
+							<li>Moq</li>
+						</ul>
+							
+						</div>
+						<header>
+							<h3 class="name">
+								Saxo Bank
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									August 2014
+								</span>
+								<span class="endDate">
+									- January 2015
+								</span>
+							</div>
+							<div class="website" style="clear: both;">
+								<a href="https://www.home.saxo">https://www.home.saxo</a>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Senior developer &amp; designer for SKAT/FATCA reporting 2014
+						</div>
+						<div class="summary">
+							<p>Responsible for implementing new quarterly reports (so far reporting was performed on an annual basis), a new report type to comply with FATCA, and additional data quality improvements of reported data</p>
+							<p>Project effectively concluded end of January as reporting data for the income year 2014 was successfully accepted by the Danish tax authorities (SKAT)</p>
+						</div>
+
+						<ul class="highlights">
+							<li>Translated new Danish SKAT requirements together with business owner to code requirements</li>
+							<li>Implemented several new report types added for 2014</li>
+							<li>Wrote requirements for new reporting processes to improve the data quality in the reports</li>
+							<li>Maintained legacy C# WinForms application for business user(s) which provided UI-friendly data administration application</li>
+							<li>Performed performance analysis and tuning of responsiveness of stored procedures</li>
+							<li>Coordinated delivery of design and implementation with other team members and lead developer for release and preparation of team for support &amp; maintenance of the system</li>
+							<li>Provided design documentation, test support and testing guidelines</li>
+							<li>Handled defect analysis and fixing in collaboration with testers in India</li>
+							<li>Created continuous integration environment in TFS assuring minimum coverage and pass rate of written unit tests</li>
+							<li>Created a functional testing suite to address lack of exposure to tests</li>
+						</ul>
+
+						
+						<ul class="contacts">
+							<li style="font-weight: 700;list-style: none">Contacts:</li>
+							<li style="list-style: none">PM Anders Fogtman</li>
+							<li style="list-style: none">Lead Developer Carl Nymann</li>
+						</ul>
+
+						<ul class="keywords">
+							<li>.NET 3.5-4</li>
+							<li>C#</li>
+							<li>LINQ</li>
+							<li>WCF</li>
+							<li>SOAP</li>
+							<li>WinForms</li>
+							<li>SQL server</li>
+							<li>T-SQL</li>
+							<li>STP</li>
+							<li>NUnit</li>
+							<li>TFS</li>
+							<li>Enterprise Library</li>
+							<li>SQL Management Studio</li>
+							<li>ReSharper</li>
+							<li>RedGate SQL Toolbelt</li>
+						</ul>
+							
+						</div>
+						<header>
+							<h3 class="name">
+								Saxo Bank
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									June 2012
+								</span>
+								<span class="endDate">
+									- May 2014
+								</span>
+							</div>
+							<div class="website" style="clear: both;">
+								<a href="https://www.home.saxo">https://www.home.saxo</a>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Senior developer &amp; designer for FX Physical Delivery project
+						</div>
+						<div class="summary">
+							<p>Responsible for designing and implementing new features to support new Corporate product FX Physical Delivery by developing extension points in existing and already running systems, i.e. a SWIFT-message based automated payment system with focus on automation, and critical uptime requirements  (scalability, and recovery policies)</p>
+						</div>
+
+						<ul class="highlights">
+							<li>Handled design and development work asynchronous system to process payments based on business user actions performed in the data administration application</li>
+							<li>Developed of stored procedures and tables in large volume and production critical SQL server databases to provide data to automate outgoing payments for FX trades</li>
+							<li>Handled design and development of asynchronous infrastructure to automatically process and send out payments to and from the SWIFT gateway</li>
+							<li>Completed overhaul of generation of SWIFT messages</li>
+							<li>Created mini-framework like AutoFixture to simplify writing these using NUnit, MSTest, and Moq.</li>
+							<li>Created  design documentation, test support and testing guidelines</li>
+							<li>Maintained existing administrative applications in C#/WinForms</li>
+							<li>Did defect analysis and fixing in collaboration with testers in India, and on near-production environments (e.g. WinDbg for unexpected exceptions, stack overflows, etc)</li>
+							<li>Coordinated delivery of design and implementation with platform teams for release and preparation of team for support &amp; maintenance of the system</li>
+							<li>Established continuous integration environment in TFS assuring minimum coverage and pass rate of written unit tests</li>
+						</ul>
+
+						
+						<ul class="contacts">
+							<li style="font-weight: 700;list-style: none">Contacts:</li>
+							<li style="list-style: none">VP Christoffer Rosenkilde Nielsen</li>
+							<li style="list-style: none">PM Kevin Hejn</li>
+						</ul>
+
+						<ul class="keywords">
+							<li>.NET 3.5-4</li>
+							<li>C#</li>
+							<li>LINQ</li>
+							<li>IBM MQ</li>
+							<li>SOA</li>
+							<li>WCF</li>
+							<li>SOAP</li>
+							<li>WinForms</li>
+							<li>SQL server</li>
+							<li>T-SQL</li>
+							<li>STP</li>
+							<li>NUnit</li>
+							<li>Moq</li>
+							<li>TFS</li>
+							<li>Enterprise Library</li>
+							<li>SWIFT (secure financial messaging services)</li>
+							<li>SmartInspect</li>
+							<li>Unity</li>
+							<li>AutoFac</li>
+							<li>WinDbg</li>
+							<li>Visio</li>
+							<li>Exchange Web Services</li>
+							<li>SQL Management Studio</li>
+							<li>ReSharper</li>
+							<li>RedGate SQL Toolbelt</li>
+						</ul>
+							
+						</div>
+						<header>
+							<h3 class="name">
+								Saxo Bank
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									April 2011
+								</span>
+								<span class="endDate">
+									- May 2012
+								</span>
+							</div>
+							<div class="website" style="clear: both;">
+								<a href="https://www.home.saxo">https://www.home.saxo</a>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Senior developer &amp; designer for Saxo Group Engine project
+						</div>
+						<div class="summary">
+							<p>Targetted a new master data management system to enable the bank to add new business lines more swiftly by retiring a legacy VB.NET/WinForms based BackOffice bi-directional data synchronisation application with a stronger and flexible enterprise message bus based version. This including supporting bi-directional data flow with a new Microsoft CRM system</p>
+						</div>
+
+						<ul class="highlights">
+							<li>Developed and maintained a legacy administrations WinForms application</li>
+							<li>Proposed new development plan to replace legacy funding processing system originally written in Windows Workflow Foundation</li>
+							<li>Completed design and development work of a data-distribution system based on BizTalk (as underlying message bus), Entity Fework, SQL server and WCF</li>
+							<li>Designed and development of a new data administration application using WinForms utilising new data-distribution system</li>
+							<li>Developed T4 templates to auto generate T-SQL and stored procedures based on graphical modelling of database</li>
+							<li>Developed and proof of concept of a data-distribution system for Biztalk allowing for monitoring of the delivery state of d using custom Biztalk pipelines</li>
+							<li>Provided performance analysis and tuning of responsiveness of certain MSCRM systems (APIs) written in C# and T-SQL stored pedures</li>
+							<li>Coordinated delivery of design and implementation with platform teams for release and preparation of team for support &amp; mtenance of the system</li>
+							<li>Provided design documentation, test support and testing guidelines</li>
+							<li>Did defect analysis and fixing in collaboration with testers in India</li>
+							<li>Worked in continuous integration environment in TFS assuring minimum coverage and pass rate of written unit tests</li>
+						</ul>
+
+						
+						<ul class="contacts">
+							<li style="font-weight: 700;list-style: none">Contacts:</li>
+							<li style="list-style: none">VP Stacie Michelle Kartes</li>
+							<li style="list-style: none">PM Ole Højriis Kristensen</li>
+						</ul>
+
+						<ul class="keywords">
+							<li>.NET 3.5-4</li>
+							<li>C#</li>
+							<li>LINQ</li>
+							<li>SOA</li>
+							<li>WCF</li>
+							<li>SOAP</li>
+							<li>WinForms</li>
+							<li>SQL server</li>
+							<li>T-SQL</li>
+							<li>STP</li>
+							<li>NUnit</li>
+							<li>Moq</li>
+							<li>TFS</li>
+							<li>Enterprise Library</li>
+							<li>SmartInspect</li>
+							<li>Unity</li>
+							<li>AutoFac</li>
+							<li>WinDbg</li>
+							<li>Visio</li>
+							<li>BizTalk</li>
+							<li>MS CRM API</li>
+							<li>SQL Management Studio</li>
+							<li>ReSharper</li>
+							<li>RedGate SQL Toolbelt</li>
+						</ul>
+							
+						</div>
+						<header>
+							<h3 class="name">
+								ZYB/Vodafone
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									February 2009
+								</span>
+								<span class="endDate">
+									- December 2010
+								</span>
+							</div>
+							<div class="website" style="clear: both;">
+								<a href="http://www.zyb.com ✝">http://www.zyb.com ✝</a>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Senior developer &amp; designer focussing on scaling and integrating with other SNSes
+						</div>
+						<div class="summary">
+							<p>Contributed with my expertise with WCF gained through previous projects on zyb.com, an address book and social network service, which had just been acquired by Vodafone. Hence there was an expectation that the system operated with a high level of performance and interoperability with other external systems and SNSes such as their unified web-service system, and various tailor made mobile applications. </p>
+						</div>
+
+						<ul class="highlights">
+							<li>Designed and developed new SOA system using WCF based JSON and SOAP services based on legacy system code that enabled access from unified Vodafone services, web and mobile applications</li>
+							<li>Developed and maintained user provisioning SOA services in C# (sign-in, login, user profile, etc) together with address book shronisation as SOA based systems in C#</li>
+							<li>Gained x3 performance in reducing unnessary round trips to databases and caches</li>
+							<li>Gained x3 performance in using Google protobuf serializer</li>
+							<li>Used ANTS profiler and other enterprise level profiler tools to collecting performance metrics real-time</li>
+							<li>Development of unit and functional integration tests in C# running continuous integration</li>
+							<li>Actively participating in architecture and design discussions</li>
+							<li>Working with teams geographically distributed over many countries</li>
+							<li>Handled defect analysis, and fixing including on near-production envs (e.g. by use of WinDbg, injection of proxies to debug data on mobile aications)</li>
+							<li>Development in continuous integration environment built on NAnt/ CruiseControl assuring minimum coverage and pass rate of written functional integration tests</li>
+						</ul>
+
+						
+						<ul class="contacts">
+							<li style="font-weight: 700;list-style: none">Contacts:</li>
+							<li style="list-style: none">PM Andreas Povlsen</li>
+							<li style="list-style: none">PM Niels Bjørkøe</li>
+						</ul>
+
+						<ul class="keywords">
+							<li>.NET 3.5</li>
+							<li>C#</li>
+							<li>SOA</li>
+							<li>WCF</li>
+							<li>Microsoft MQ</li>
+							<li>SQL Server 2005 and 2008</li>
+							<li>T-SQL</li>
+							<li>STP(Managed)</li>
+							<li>JSON</li>
+							<li>Memcached</li>
+							<li>log4net</li>
+							<li>Nunit</li>
+							<li>Nant</li>
+							<li>Spring.NET</li>
+							<li>Castle</li>
+							<li>RhinoMocks</li>
+							<li>CruiseControl</li>
+							<li>WinDbg</li>
+							<li>SQL Management Studio</li>
+							<li>ANTS profiler</li>
+							<li>ReSharper</li>
+						</ul>
+							
+						</div>
+						<header>
+							<h3 class="name">
+								vieLife London
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									June 2006
+								</span>
+								<span class="endDate">
+									- October 2007
+								</span>
+							</div>
+							<div class="website" style="clear: both;">
+								<a href="http://vielife.com">http://vielife.com</a>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Senior developer &amp; lead for intelligent online content creation
+						</div>
+						<div class="summary">
+							<p>Co-lead C#/.NET backend system developer and designer for a 4 member core team developing a &#x27;next generation&#x27; SOA/ESB/rules based system for Health and well-being (HWB) services provider with emphasis in flexible interoperability with 3rd party health services applications.</p>
+							<p>Strategically this new system was intended to replace an older Java-based system.</p>
+						</div>
+
+						<ul class="highlights">
+							<li>Implemented a new SOA/ESB based core system in WCF on Microsoft Message Queues in C#</li>
+							<li>Created a scalable, recoverable time-driven state-engine to move patients through their time-based change programme initially using Windows Workflow Foundation but was abandoned due to Workflow Foundations immaturity (beta versions)</li>
+							<li>Created a new proof-of-concept of bespoke single-sign-on services in C#/ASP.NET taylor made</li>
+							<li>Created a bespoke rules engine for dynamic advisory during a patient&#x27;s change programme (Windows Workflow Foundation&#x27;s rules system was evaluated but was abandoned for a bespoke system)</li>
+							<li>Worked with a medium-sized (20-25) IT- and business members who were responsible for developing patient programmes using the core system that we developed</li>
+							<li>Implemented content and rules authoring tools to support the team creating the programmes</li>
+							<li>Developed in continuous integration environment built on CruiseControl/Hudson assuring minimum coverage and pass rate of written unit tests</li>
+						</ul>
+
+						
+						<ul class="contacts">
+							<li style="font-weight: 700;list-style: none">Contacts:</li>
+							<li style="list-style: none">CTO Simon Armstrong</li>
+							<li style="list-style: none">PM Sarah Thompson</li>
+							<li style="list-style: none">PM Rob Poffel</li>
+						</ul>
+
+						<ul class="keywords">
+							<li>.NET 3.0</li>
+							<li>C#</li>
+							<li>SOA</li>
+							<li>WCF</li>
+							<li>Microsoft MQ</li>
+							<li>SQL Server 2005</li>
+							<li>STP</li>
+							<li>Managed stored procedures</li>
+							<li>DB4O</li>
+							<li>WF</li>
+							<li>Rules Engine</li>
+							<li>Excel</li>
+							<li>log4net</li>
+							<li>iBatis.NET</li>
+							<li>nHibernate</li>
+							<li>NUnit</li>
+							<li>NAnt</li>
+							<li>Spring.NET</li>
+							<li>Castle</li>
+							<li>NMock</li>
+							<li>CruiseControl</li>
+							<li>SQL Management Studio</li>
+							<li>SCRUM coaching</li>
+						</ul>
+							
+						</div>
+						<header>
+							<h3 class="name">
+								UBS London
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									September 2005
+								</span>
+								<span class="endDate">
+									- December 2005
+								</span>
+							</div>
+							<div class="website" style="clear: both;">
+								<a href="http://valtech.com">http://valtech.com</a>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Senior developer from Valtech
+						</div>
+						<div class="summary">
+							<p>Responsible for maintaining a risk analysis service (Credit Risk IT system) for UBS London using Microsoft Analysis Services tools. Optimised the system by reducing the the nightly ETL times to 30 minutes, from an initial 6 hours to load a single day&#x27;s financial metrics</p>
+						</div>
+
+						<ul class="highlights">
+							<li>Handled re-architecture and re-development of bespoke ETL components in C# in order to gain performance improvements and to support and mHandled rintain optimal ETL throughput for the daily input of financial data</li>
+							<li>Handled maintenance of datawarehouse model and OLAP model in SQL Server 2005</li>
+							<li>Enabled business users to slice-and-dice data using pivot tables and MDX queries in Excel</li>
+							<li>Handled siness requests directly thereby having direct contact with the business owners doing so</li>
+						</ul>
+
+						
+						<ul class="contacts">
+							<li style="font-weight: 700;list-style: none">Contacts:</li>
+							<li style="list-style: none">PM Sarah Thompson</li>
+							<li style="list-style: none">PM Rob Poffel</li>
+							<li style="list-style: none">CTO Simon Armstrong</li>
+						</ul>
+
+						<ul class="keywords">
+							<li>.NET 2.0</li>
+							<li>C#</li>
+							<li>SQL Server 2005 and Analysis Services</li>
+							<li>OLAP</li>
+							<li>MDX</li>
+							<li>log4net</li>
+							<li>NUnit</li>
+							<li>NAnt</li>
+							<li>Spring.NET</li>
+							<li>DW/ETL</li>
+							<li>SQL Management Studio</li>
+							<li>Redgate SQL tools</li>
+							<li>Excel</li>
+							<li>SCRUM coaching</li>
+						</ul>
+							
+						</div>
+						<header>
+							<h3 class="name">
+								JPMorgan Chase London
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									September 2003
+								</span>
+								<span class="endDate">
+									- October 2004
+								</span>
+							</div>
+							<div class="website" style="clear: both;">
+								<a href="https://www.jpmorgan.com">https://www.jpmorgan.com</a>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Lead developer from Valtech
+						</div>
+						<div class="summary">
+							<p>Responsible for implementing a desktop near-real-time application to enable traders to perform risk analysis thereby gaining knowledge on financial markets. Also included supporting and coaching of team members.</p>
+						</div>
+
+						<ul class="highlights">
+							<li>Maintained and developed client-server architecture due to data-intense/heavy WinForms application</li>
+							<li>Used DB2 as backing store, file system for temporary user store</li>
+							<li>Near-real time grid update of instruments metrics (quotes, deltas, greeks, etc)</li>
+							<li>Optimised loading and refreshing volatility chart by using memory and disk caching</li>
+							<li>Consumed real-time data (and volatility matrices) via Tibco/JMS-bridge (using time critical stock information from Reuters, Bmberg etc)</li>
+							<li>Co-developed with team in New York office</li>
+							<li>Created documentation and substantiated technology choices made or recommendedations through e.g. proof-of-concept, optimisations, etc.</li>
+						</ul>
+
+						
+						<ul class="contacts">
+							<li style="font-weight: 700;list-style: none">Contacts:</li>
+							<li style="list-style: none">PM Joanne Cunningham</li>
+							<li style="list-style: none">CEO Lars Bladt</li>
+							<li style="list-style: none">PM Christopher Taylor</li>
+							<li style="list-style: none">Guillaume Nerzic</li>
+						</ul>
+
+						<ul class="keywords">
+							<li>.NET 1.1</li>
+							<li>C#</li>
+							<li>WinForms</li>
+							<li>DB2</li>
+							<li>XML</li>
+							<li>Remoting Objects</li>
+							<li>log4net</li>
+							<li>TIBCO</li>
+							<li>Windows NT 3.51</li>
+						</ul>
+							
+						</div>
+						<header>
+							<h3 class="name">
+								Valtech Copenhagen and London
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									February 2001
+								</span>
+								<span class="endDate">
+									- September 2007
+								</span>
+							</div>
+							<div class="website" style="clear: both;">
+								<a href="http://valtech.com">http://valtech.com</a>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Senior developer
+						</div>
+						<div class="summary">
+							<p>Senior C#/.NET consultant at Valtech, a world-wide e-business consultancy company focussing on designing and developing e-business and content driven web sites including the underlying data/content services</p>
+						</div>
+
+						<ul class="highlights">
+							<li>General supervision of the design of various parts of the Microsoft based web-site solutions</li>
+							<li>Design and development of content based web-sites using custom built CMS using XML as underlying data store and XSLT to grate HTML</li>
+							<li>Design and development using similar technologies as above with Microsoft CMS and Sitecore</li>
+							<li>Design and development of databases using T-SQL and stored procedures on Microsoft SQL server</li>
+							<li>Integration with 3rd party and legacy client data through e,g. FTP, Web Services (often having to reverse engineer missing data structures)</li>
+							<li>Mentored and coached less experienced junior co-workers</li>
+							<li>Direct clients facing interaction to e.g. get further clarification of requirements</li>
+						</ul>
+
+						
+						<ul class="contacts">
+							<li style="font-weight: 700;list-style: none">Contacts:</li>
+							<li style="list-style: none">CEO Carsten Brogaard</li>
+						</ul>
+
+						<ul class="keywords">
+							<li>.NET 1.0-3</li>
+							<li>C#</li>
+							<li>Sitecore API/Microsoft CMS</li>
+							<li>XML</li>
+							<li>XPath</li>
+							<li>XSLT</li>
+							<li>SQL Server</li>
+							<li>STP</li>
+							<li>ASP.NET</li>
+							<li>Visual Studio</li>
+							<li>SQL Management Studio</li>
+							<li>Redgate SQL tools</li>
+							<li>And other outmoded languages like Perl, ASP, VBScript, etc.</li>
+						</ul>
+							
+						</div>
+					</section>
+				</section>
+		
+				<section class="section">
+					<h2 class='section-title'>Education</h2>
+					<section id="education">
+							<header>
+									<h3 class="institution">
+										KJLS
+									</h3>
+								<div class="date">
+									<span class="startDate">
+										2007
+									</span>
+									<span class="endDate">
+										- 2009
+									</span>
+								</div>
+							</header>
+							<div class="item">
+									<div class="studyType">
+										JLPT1
+									</div>
+									<div class="area">
+										Japanese
+									</div>
+							</div>
+							<header>
+									<h3 class="institution">
+										DTU - Technical University of Denmark
+									</h3>
+								<div class="date">
+									<span class="startDate">
+										1992
+									</span>
+									<span class="endDate">
+										- 1996
+									</span>
+								</div>
+							</header>
+							<div class="item">
+									<div class="studyType">
+										B.Sc.Eng
+									</div>
+									<div class="area">
+										Computer Engineering
+									</div>
+							</div>
+					</section>
+				</section>
+		
+			
+
+		
+		
+				<section class="section">
+					<h2 class='section-title'>Skills</h2>
+					<section id="skills">
+						<div class="item">
+							<div class="name">
+								Development
+							</div>
+							<ul class="keywords">
+								<li>.NET</li>
+								<li>C#</li>
+								<li>LINQ</li>
+								<li>Web API</li>
+								<li>Owin</li>
+								<li>Swagger</li>
+								<li>REST API</li>
+								<li>JSON</li>
+								<li>Azure Web Apps</li>
+								<li>Azure SQL</li>
+								<li>Azure Storage</li>
+								<li>Azure OAuth</li>
+								<li>Azure KeyVault</li>
+								<li>Azure Active Directory B2C</li>
+								<li>Azure ARM templates</li>
+								<li>Azure Event Hubs</li>
+								<li>SQL</li>
+								<li>T-SQL</li>
+								<li>Entity Framework</li>
+								<li>STP/Stored Procedures</li>
+								<li>ETL</li>
+								<li>Datawarehousing</li>
+								<li>NoSQL</li>
+								<li>MongoDB</li>
+								<li>Memcached</li>
+								<li>Redis</li>
+								<li>BizTalk</li>
+								<li>WCF</li>
+								<li>SOA</li>
+								<li>SOAP</li>
+								<li>XML</li>
+								<li>XPath</li>
+								<li>XSLT</li>
+								<li>VSTS Build vNext</li>
+								<li>VSTS Release Management</li>
+								<li>VSTS Git</li>
+								<li>GitHub/GitHub Enterprise</li>
+								<li>TFS</li>
+								<li>SVN</li>
+								<li>CruiseControl</li>
+								<li>SOLID</li>
+								<li>TDD</li>
+								<li>NUnit</li>
+								<li>MSTest</li>
+								<li>xUnit</li>
+								<li>Moq</li>
+								<li>AutoFixture</li>
+								<li>BDD</li>
+								<li>SpecFlow</li>
+								<li>DI/IoC</li>
+								<li>AutoFac</li>
+								<li>StructureMap</li>
+								<li>Unity</li>
+								<li>CQS/CQRS</li>
+								<li>IFTTT</li>
+								<li>FluentAssertion</li>
+								<li>FluentValidation</li>
+								<li>WinForms</li>
+								<li>ASP.NET</li>
+								<li>MVVM</li>
+								<li>MVC</li>
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>Javascript</li>
+								<li>jQuery</li>
+								<li>Visual Studio</li>
+								<li>SQL Mangement Studio</li>
+								<li>Resharper</li>
+								<li>RedGate SQL Tools</li>
+								<li>WinDbg</li>
+								<li>Docker</li>
+								<li>Enterprise patterns</li>
+								<li>Async methods</li>
+								<li>Multi-threading</li>
+								<li>Agile methodologies</li>
+								<li>UML</li>
+								<li>SCRUM</li>
+								<li>Kanban</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+
+				<section class="section">
+					<h2 class='section-title'>Languages</h2>
+					<section id="languages">
+						<div class="item">
+							<div class="language">
+								English
+							</div>
+							<div class="fluency">
+								<em>Fluent</em>
+							</div>
+						</div>
+						<div class="item">
+							<div class="language">
+								Danish
+							</div>
+							<div class="fluency">
+								<em>Fluent</em>
+							</div>
+						</div>
+						<div class="item">
+							<div class="language">
+								Japanese
+							</div>
+							<div class="fluency">
+								<em>Advanced</em>
+							</div>
+						</div>
+					</section>
+				</section>
+
+		
+		</div>		
+	</body>
+	
+</html>
